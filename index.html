@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bandhan - Linked List Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Bandhan</h1>
+        <p>Interactive visualization of Singly Linked List operations</p>
+      </header>
+
+      <div class="controls-container">
+        <div class="control-group">
+          <h3>Insert</h3>
+          <div class="input-group">
+            <input type="number" id="insert-value" placeholder="Value" />
+            <button id="btn-insert-start" class="btn btn-primary">
+              Insert Start
+            </button>
+            <button id="btn-insert-end" class="btn btn-primary">
+              Insert End
+            </button>
+          </div>
+          <div class="input-group">
+            <input type="number" id="insert-index-value" placeholder="Value to Insert" />
+            <input
+              type="number"
+              id="insert-index"
+              placeholder="Target Value"
+            />
+            <button id="btn-insert-middle" class="btn btn-secondary">
+              Insert Before
+            </button>
+            <button id="btn-insert-after" class="btn btn-secondary">
+              Insert After
+            </button>
+          </div>
+          <div class="input-group">
+             <input type="number" id="insert-at-index-value" placeholder="Value to Insert" />
+             <input type="number" id="insert-at-index-idx" placeholder="Index (1 = Start)" />
+             <button id="btn-insert-at-index" class="btn btn-secondary">
+               Insert at Index
+             </button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h3>Delete</h3>
+          <div class="input-group">
+            <button id="btn-delete-start" class="btn btn-danger">
+              Delete Start
+            </button>
+            <button id="btn-delete-end" class="btn btn-danger">
+              Delete End
+            </button>
+          </div>
+          <div class="input-group">
+            <input
+              type="number"
+              id="delete-value"
+              placeholder="Value to Delete"
+            />
+            <button id="btn-delete-middle" class="btn btn-danger-outline">
+              Delete Value
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="visualizer-container" class="visualizer">
+        <div id="linked-list" class="linked-list">
+          <!-- Nodes will be generated here -->
+          <div class="empty-state">List is empty</div>
+        </div>
+      </div>
+
+      <div id="message-area" class="message-area"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
